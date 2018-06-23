@@ -1,0 +1,44 @@
+## update git version
+# $ sudo yum remove git && sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-ExtUtils-MakeMaker && cd /usr/local/src && wget https://www.kernel.org/pub/software/scm/git/git-2.9.4.tar.gz && tar -zxf git-2.9.4.tar.gz && cd git-2.9.4 && sudo make prefix=/usr/local all && sudo make prefix=/usr/local install && git --version
+## completion
+# for git 1.7.1
+# $ echo 'source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash' >> ~/.bash_profile
+# for git latest version
+# $ echo 'source ~/.git/contrib/completion/git-completion.bash' >> ~/.bash_profile
+#
+## show branch
+# $ echo 'source ~/.git/contrib/completion/git-prompt.sh' >> ~/.bash_profile
+# $ echo 'GIT_PS1_SHOWDIRTYSTATE=1' >> ~/.bash_profile
+# $ echo 'GIT_PS1_SHOWUPSTREAM=1' >> ~/.bash_profile
+# $ echo 'GIT_PS1_SHOWUNTRACKEDFILES=' >> ~/.bash_profile
+# $ echo 'GIT_PS1_SHOWSTASHSTATE=1' >> ~/.bash_profile
+# $ echo 'export PS1='[\[\033[1;32m\]\u\[\033[00m\]@\[\033[1;35m\]\h \[\033[1;34m\]\w\[\033[1;31m\]$(__git_ps1)\[\033[00m\] ]\$ '' >> ~/.bash_profile
+#
+# $ source ~/.bash_profile
+# $ git config --global user.name "kohei.shimadutsu"
+# $ git config --global user.email chiyoda.dutu.com@gmail.com
+
+
+[user]
+	name = kohei.shimadutsu
+	email = chiyoda.dutu.com@gmail.com
+[alias]
+  st = status
+  co = checkout
+  l = log -5
+  lo = log -5 --oneline
+  b = branch
+  ba = branch -a
+  d = diff
+  dc = diff --cached
+  dw = diff --word-diff
+  dwc = diff --cached --word-diff
+  dcw = diff --cached --word-diff
+  db = diff -b
+  dcb = diff --cached -b
+  dwb = diff --word-diff -b
+  dwcb = diff --cached --word-diff -b
+  dcwb = diff --cached --word-diff -b
+  graph = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'

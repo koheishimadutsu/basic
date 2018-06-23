@@ -1,0 +1,56 @@
+" install latest vim
+"   $ sudo yum install gcc make ncurses-devel mercurial
+"   $ cd /usr/local/src
+"   $ sudo hg clone https://bitbucket.org/vim-mirror/vim vim
+"   $ cd vim
+"   $ sudo ./configure --with-features=huge --enable-multibyte --disable-selinux
+"   $ sudo make
+"   $ sudo make install
+"   $ source ~/.bash_profile
+"   $ vi -v
+"
+" display crlf
+"   :e ++ff=unix
+" show encoding
+"   :set enc?
+"   :set fenc?
+" reopen set encoding
+"   :e ++enc=cp932
+" save reencoding
+"   :set fenc=utf-8
+set title
+set number
+set ruler
+set cursorline
+" vim version >= 7.4.785
+" set nofixeol
+set enc=utf-8
+"set enc=euc-jp
+set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
+set fileformats=unix,mac,dos
+"
+set cindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+"set incsearch
+""set hlsearch
+syntax on
+
+" color settings
+" https://github.com/tomasr/molokai.git
+" colorscheme molokai
+" https://github.com/hachy/eva01.vim.git
+colorscheme eva01
+" https://github.com/jyota/vimColors.git
+" colorscheme eva
+
+highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+
+nnoremap / :set hlsearch<CR>/
+nnoremap n :set hlsearch<CR>nzz
+nnoremap N :set hlsearch<CR>Nzz
+nnoremap <ESC><ESC> :set nohlsearch<CR>
+nnoremap <F1> <ESC>
+autocmd BufWritePre * :%s/\s\+$//ge
