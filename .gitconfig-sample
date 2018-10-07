@@ -19,9 +19,9 @@
 # $ git config --global user.email chiyoda.dutu.com@gmail.com
 
 
-[user]
-	name = kohei.shimadutsu
-	email = chiyoda.dutu.com@gmail.com
+#[user]
+#  name = kohei.shimadutsu
+#  email = chiyoda.dutu.com@gmail.com
 [alias]
   st = status
   co = checkout
