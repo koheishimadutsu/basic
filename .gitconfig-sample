@@ -24,6 +24,7 @@
 #  email = chiyoda.dutu.com@gmail.com
 [alias]
   st = status
+  fe = fetch --prune
   co = checkout
   l = log -5
   lo = log -5 --oneline
