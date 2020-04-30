@@ -1,0 +1,20 @@
+autoload -Uz colors
+colors
+
+# mkdir -p ~/.zsh
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh -o ~/.zsh/git-completion.zsh
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.zsh/git-prompt.sh
+fpath=(~/.zsh $fpath)
+if [ -f ${HOME}/.zsh/git-completion.zsh ]; then
+       zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh
+fi
+if [ -f ${HOME}/.zsh/git-prompt.sh ]; then
+       source ${HOME}/.zsh/git-prompt.sh
+fi
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+GIT_PS1_SHOWSTASHSTATE=1
+
+setopt PROMPT_SUBST ; PS1="[%n@%m ${fg[blue]}%c${reset_color}${fg[red]}$(__git_ps1 " (%s)")${reset_color}]\$ "
