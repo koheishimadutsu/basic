@@ -22,8 +22,9 @@ set title
 set number
 set ruler
 set cursorline
-" vim version >= 7.4.785
-" set nofixeol
+" trim last line carriage return
+" version >= 7.4.785
+set nofixeol
 set enc=utf-8
 "set enc=euc-jp
 set fileencodings=utf-8,iso-2022-jp,sjis,euc-jp
