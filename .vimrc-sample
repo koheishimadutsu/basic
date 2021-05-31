@@ -1,9 +1,8 @@
 " install latest vim
-"   $ sudo yum install gcc make ncurses-devel mercurial
-"   $ cd /usr/local/src
-"   $ sudo hg clone https://bitbucket.org/vim-mirror/vim vim
-"   $ cd vim
-"   $ sudo ./configure --with-features=huge --enable-multibyte --disable-selinux
+"   $ mkdir ~/tmp
+"   $ cd ~/tmp
+"   $ git clone https://github.com/vim/vim.git
+"   $ cd vim/
 "   $ sudo make
 "   $ sudo make install
 "   $ source ~/.bash_profile
