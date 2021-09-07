@@ -23,3 +23,7 @@ cp git/contrib/completion/git-prompt.sh ~/.git/contrib/completion/
 cp git/contrib/completion/git-completion.bash ~/.git/contrib/completion/
 rm -rf ./git/
 ```
+
+# TEST
+a
+
